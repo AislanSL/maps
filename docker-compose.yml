@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgis/postgis:latest
+    ports:
+      - "5435:5432"
+    container_name: "postgres_container"
+    # volumes:
+    #   - ./eventos:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
